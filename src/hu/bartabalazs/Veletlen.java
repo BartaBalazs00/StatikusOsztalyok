@@ -12,9 +12,15 @@ import java.util.Random;
 public final class Veletlen {
     private static Random random = new Random();
 
+    private static List<String> vezetekNev = feltolt("files/veznev.txt");
+    private static List<String> ferfiKerNevek = feltolt("files/ferfikernev.txt");
+    private static List<String> egyesulet = feltolt("files/egyesulet.txt");
+    private static List<String> esemenyTipus = feltolt("files/esemenytipus.txt");
+    private static List<String> noiKernev = feltolt("files/noikernev.txt");
+    private static List<String> sportag = feltolt("files/sportag.txt");
     private Veletlen() {}
 
-    private List<String> feltolt(String fajlnev){
+    private static List<String> feltolt(String fajlnev){
         List<String> fajlSorai = new ArrayList<>();
         try {
             fajlSorai = Files.readAllLines(Paths.get(fajlnev));
@@ -24,4 +30,5 @@ public final class Veletlen {
 
         return fajlSorai;
     }
+
 }
