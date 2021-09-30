@@ -13,5 +13,20 @@ public class Main {
         }
         System.out.println();
 
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Veletlen.velVezeteknev());
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Veletlen.velKeresztnev(true));
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Veletlen.velKeresztnev(false));
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Veletlen.velKeresztnev());
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Veletlen.velTeljesnev());
+        }
     }
 }
