@@ -12,7 +12,7 @@ import java.util.Random;
 public final class Veletlen {
     private static Random random = new Random();
 
-    private static List<String> vezetekNev = feltolt("files/veznev.txt");
+    private static List<String> vezetekNevek = feltolt("files/veznev.txt");
     private static List<String> ferfiKerNevek = feltolt("files/ferfikernev.txt");
     private static List<String> egyesulet = feltolt("files/egyesulet.txt");
     private static List<String> esemenyTipus = feltolt("files/esemenytipus.txt");
@@ -40,5 +40,7 @@ public final class Veletlen {
         return (char)velEgesz(min, max);
     }
 
-
+    public static String velVezeteknev(){
+        return vezetekNevek.get(random.nextInt(vezetekNevek.size()));
+    }
 }
