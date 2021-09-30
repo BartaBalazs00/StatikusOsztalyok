@@ -12,5 +12,6 @@ public class Main {
             System.out.print(Veletlen.velKarakter('a','z')+" ");
         }
         System.out.println();
+
     }
 }

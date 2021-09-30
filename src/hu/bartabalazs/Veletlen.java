@@ -43,4 +43,27 @@ public final class Veletlen {
     public static String velVezeteknev(){
         return vezetekNevek.get(random.nextInt(vezetekNevek.size()));
     }
+
+    /*Véletlen keresztnevet generáló föggvény
+    @param nem nem a név neme amit szeretnénk generálni : true-férfi, false-nő
+    @return a generált keresztnév String*/
+    public static String velKeresztnev(boolean nem){
+        String keresztNev;
+        if(nem){
+            keresztNev = ferfiKerNevek.get(random.nextInt(ferfiKerNevek.size()));
+        } else {
+            keresztNev = noiKernev.get(random.nextInt(noiKernev.size()));
+        }
+        return keresztNev;
+    }
+    public static String  velKeresztnev(){
+        return velKeresztnev(random.nextBoolean());
+    }
+
+    public static String velTeljesnev(boolean nem){
+        return String.format("%s %s",velVezeteknev(), velKeresztnev(nem));
+    }
+    public static String velTeljesnev(){
+        return String.format("%s %s",velVezeteknev(), velKeresztnev());
+    }
 }
