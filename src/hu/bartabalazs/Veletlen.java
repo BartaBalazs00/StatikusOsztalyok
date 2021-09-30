@@ -31,4 +31,10 @@ public final class Veletlen {
         return fajlSorai;
     }
 
+
+    private static int velEgesz(int min, int max){
+        return random.nextInt(max-min+1)+min;
+    }
+
+
 }
