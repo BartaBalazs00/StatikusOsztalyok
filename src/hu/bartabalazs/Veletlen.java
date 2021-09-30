@@ -36,5 +36,8 @@ public final class Veletlen {
         return random.nextInt(max-min+1)+min;
     }
 
+    private static char velKarakter(char min, char max){
+        return (char)velEgesz(min, max);
+    }
 
 }
