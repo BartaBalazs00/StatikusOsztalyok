@@ -32,12 +32,13 @@ public final class Veletlen {
     }
 
 
-    private static int velEgesz(int min, int max){
+    public static int velEgesz(int min, int max){
         return random.nextInt(max-min+1)+min;
     }
 
-    private static char velKarakter(char min, char max){
+    public static char velKarakter(char min, char max){
         return (char)velEgesz(min, max);
     }
+
 
 }
